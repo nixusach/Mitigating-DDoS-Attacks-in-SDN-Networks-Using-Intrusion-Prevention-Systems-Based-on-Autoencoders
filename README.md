@@ -55,10 +55,10 @@ For normal traffic, start by executing:
    ```bash
    sudo python3 create_files.py
    ```
-This will create files for FTP operations. Next, execute the file traffic.py, which contains a loop of 40 sessions. Each session includes the execution of 3 functions:
+This will create files for FTP operations. Next, execute the file `traffic.py`, which contains a loop of 40 sessions. Each session includes the execution of 3 functions:
 
 - The first function sends a ping request with a random number of packets between 2 and 6 to a random IP address among the hosts.
 - The second function performs an HTTP request to retrieve and download an item from the web server.
 - The third function performs a random operation (download, upload, rename, delete) on an item in the shared resource of the FTP server.
 
-For malicious traffic, we use the packages hping3 and Low Orbit Ion Cannon. The file attack.txt contains the commands used to perform DDoS attacks.
+For malicious traffic, we use the packages hping3 and Low Orbit Ion Cannon. The file `attack.txt` contains the commands used to perform DDoS attacks.
