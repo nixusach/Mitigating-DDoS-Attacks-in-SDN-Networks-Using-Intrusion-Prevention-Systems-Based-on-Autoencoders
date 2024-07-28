@@ -1,0 +1,35 @@
+*** install ryu ***
+sudo apt-get install python3-pip
+sudo pip3 install ryu
+sudo pip install eventlet==0.30.2
+sudo apt-get install python-is-python3
+
+*** install mininet ***
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install git
+git clone https://github.com/mininet/mininet
+cd mininet/util/
+sudo ./install.sh -a
+
+*** Give mininet hosts access to internet ***
+sudo chown root:root /run/user/1000/gdm/Xauthority
+sudo nano /etc/resolv.conf
+**add: nameserver 8.8.8.8
+
+*** Execute full topology ***
+sudo python create_files.py   (create files for ftp server)
+sudo ryu-manager monitor.py   (Execute monitor ryu)
+sudo python topology.py       (Execute topology mininet)
+
+*** run ryu simple switch ***
+sudo ryu-manager ryu.app.gui_topology.gui_topology ryu.app.simple_switch_13 
+
+*** share folder in vmware ***
+sudo su
+gedit /etc/fstab 
+vmhgfs-fuse    /mnt/hgfs    fuse    defaults,allow_other    0    0    (add this in last line)
+mkdir /mnt/hgfs
+mount -a
+

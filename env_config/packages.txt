@@ -1,0 +1,20 @@
+sudo pip install pandas
+sudo pip install feature-engine
+sudo pip install keras
+sudo pip install tensorflow
+sudo pip install --upgrade typing-extensions
+sudo pip install scikit-learn
+sudo pip install pyftpdlib (FTP server)
+sudo pip install SQLAlchemy
+
+sudo apt install sqlite3
+sudo apt install sqlitebrowser
+sqlite3 my_db.db
+.database
+
+#site web
+sudo pip install --upgrade typing-extensions
+sudo pip install flask
+sudo pip install flask-sqlalchemy
+sudo pip install Flask-Login
+sudo pip install pyjwt
