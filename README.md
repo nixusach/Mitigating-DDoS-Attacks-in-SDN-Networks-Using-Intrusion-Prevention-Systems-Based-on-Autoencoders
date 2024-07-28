@@ -22,12 +22,12 @@ This project aims to implement an intrusion detection system in SDN networks to 
 1. Develop a source code file named `topology.py` and execute it in the terminal using:
    ```bash
    sudo python3 topology.py
-
+   ```
 2. Use Miniedit, a graphical tool integrated with Mininet. To open Miniedit, run the following commands:
    ```bash
    cd mininet/mininet/examples
    sudo python3 miniedit.py
-
+   ```
    After designing your topology in Miniedit, click "File" and then "Export Level 2 Script" to obtain the Python script for your topology. If you encounter the error TypeError: can only concatenate str (not "int") to str while saving, resolve it by modifying line 2019 in the miniedit.py script from for widget, item in self.widgetToItem to for widget, item in self.widgetToItem.items().
 
 ## Data Collection
