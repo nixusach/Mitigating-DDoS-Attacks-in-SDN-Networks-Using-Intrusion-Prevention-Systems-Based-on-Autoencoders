@@ -83,7 +83,7 @@ Autoencoders are popular for anomaly detection due to their ability to learn and
 
 ### Autoencoder Model
 Our model has two symmetrical parts: an encoder that compresses the data and retains just the most relevant features, and a decoder that attempts to reconstruct the original input from these features. After selecting the best hyperparameters, our model is illustrated in the figure below:
-
+![rules](images/1.png)
 We then calculated the minimum reconstruction error threshold (RMSE), determined from the error results at the end of training. For the test, we found an MSE of 0.03, resulting in an RMSE of 0.1732. However, when testing our model on the entire dataset, we found an MSE of 0.0301, giving an RMSE of 0.1736. This will be our reconstruction threshold. Any result with an RMSE error above 0.174 will be considered an anomaly.
 
 ### ML Model
@@ -91,6 +91,7 @@ In this section, we simulate six different algorithms (Random Forest, Decision T
 
 ## Setting Up Flow Rules to Block Malicious Traffic
 The rules are presented in the image below:
+![rules](images/2.jpg)
 
 ## Web Interface
 The final step of our implementation process is to develop a web interface. This interface has two objectives: to allow users to perform offline analyses of the data and to provide information on their network and the effectiveness of the intrusion detection system in real-time. It consists of a frontend (visual interface) and a backend (server and API).
