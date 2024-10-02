@@ -34,7 +34,7 @@ This project aims to implement an intrusion detection system in SDN networks to 
 
    The objective of using the Ryu controller is its ability to program and control various aspects of our network using Python. We modify the Ryu library file `simple_monitor_13.py` to obtain the characteristics we want from the packets in our network. The available characteristics are described in OFPMatch at [OFPMatch Documentation](https://ryu.readthedocs.io/en/latest/ofproto_v1_3_ref.html?highlight=OFPFlowMod#flow-match-structure).
 
-   We configure the file `simple_switch_13.py` to send the available characteristics using OFPMatch and save it as `simple_switch.py`. You can find this file in the `data collection` folder. We also configure `simple_monitor_13.py` and save it as `monitor.py` to handle the received characteristics and save them in the file `flow1_mod.cv`.
+   We configure the file `simple_switch_13.py` to send the available characteristics using OFPMatch and save it as `simple_switch.py`. You can find this file in the `data collection` folder. We also configure `simple_monitor_13.py` and save it as `monitor.py` to handle the received characteristics and save them in the file `flow1_mod.csv`.
 
 To collect the data, execute the monitor and topology using:
 
